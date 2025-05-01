@@ -1,10 +1,13 @@
 import React from 'react'
 
 const MovieCard = ({movie :
-    { title, original_language,poster_path,release_date,vote_average    }}) => {
+    { title, original_language,poster_path,release_date,vote_average ,
+      overview
+         }}) => {
 
   return (
-    <div className="movie-card">
+    <div className="movie-card" title={
+      [title,overview].join(' \n\n')}>
     <img src={poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}`: `/No-Poster.png`} alt={title} />
     <div className='mt-4 '>
     <h3>{title}</h3>
