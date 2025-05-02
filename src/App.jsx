@@ -89,7 +89,7 @@ setTrendingMovies(movies);
             </h1>
           <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
           </header>
-          {trendingMovies.length>0 && (<section className='trending'>
+          {searchTerm.length ==0&& trendingMovies.length>0 && (<section className='trending'>
             <h2>Trending Movies</h2>
             <ul className="flex gap-4">
               {trendingMovies.map((movie,index)=>(<li key={movie.$id}>
